@@ -1,1 +1,328 @@
+/* Анимация появления */
 
+.hidden{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+/* =====================
+   Общие настройки
+====================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:white;
+    line-height:1.6;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+/* =====================
+ Header
+====================== */
+
+header{
+
+    background:#1a1a1a;
+    position:sticky;
+    top:0;
+    z-index:100;
+
+}
+
+header .container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:60px;
+
+}
+
+nav{
+
+    display:flex;
+    gap:20px;
+
+}
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+
+}
+
+nav a:hover{
+
+    color:#00e5ff;
+
+}
+
+/* =====================
+ Hero
+====================== */
+
+.hero{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+
+    padding:80px 10%;
+
+}
+
+.hero-content{
+
+    flex:1;
+
+}
+
+.hero-content h2{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    margin-bottom:25px;
+
+}
+
+.hero-image{
+
+    flex:1;
+
+}
+
+.btn{
+
+    display:inline-block;
+    background:#00c8ff;
+    color:white;
+    padding:15px 35px;
+    border-radius:8px;
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* =====================
+ Sections
+====================== */
+
+section{
+
+    padding:80px 10%;
+
+}
+
+h2{
+
+    text-align:center;
+    margin-bottom:40px;
+
+}
+
+/* =====================
+ Cards
+====================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:#222;
+    padding:30px;
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* =====================
+ Gallery
+====================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.gallery img{
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/* =====================
+ CTA
+====================== */
+
+.cta{
+
+    text-align:center;
+
+    background:#191919;
+
+}
+
+/* =====================
+ Footer
+====================== */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    background:black;
+
+}
+
+/* =====================
+ Mobile
+====================== */
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.cards{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+header .container{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-content h2{
+
+font-size:38px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+}
